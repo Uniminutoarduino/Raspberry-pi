@@ -1,3 +1,8 @@
+```ruby
+require 'redcarpet'
+
+
+
 import Tkinter #importar modulo de interfaz grafica Tkinter Python.
 from Tkinter import *
 from tkMessageBox import * #Importar modulo MessageBox para la visualizacion de mensajes
