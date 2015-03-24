@@ -1,0 +1,14 @@
+import RPi.GPIO as GPIO #Importar libreria par manejo de pines.
+import time #importar libreria de tiempos
+
+GPIO.setmode(GPIO.BCM) #indicar los pines en modo BCM (Broadcom Mode) mira el esquema del header
+#en las paginas del tutorial.
+GPIO.setup(17,GPIO.OUT) #Configurar el GPIO 17 como salida
+
+for i in range (0,5): #Bucle de 6 iteracione o repeticiones
+	GPIO.output(17,True) #Colocar el GPIO 17 en 1 logico (Encendido)
+	time.sleep(1) #Delay o retraso de 1 segundo
+	GPIO.output(17,False) #Colocar el GPIO 17 en 0 (Apagado)
+	time.sleep(1) #Otro retraso de 1 segundo
+
+GPIO.cleanup() #Reiniciar los pines a su estado origina
