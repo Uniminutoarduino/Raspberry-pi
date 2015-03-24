@@ -1,7 +1,4 @@
-```ruby
-require 'redcarpet'
-
-
+#GUI para manejo de GPIO a través de Tkinter python.
 
 import Tkinter #importar modulo de interfaz grafica Tkinter Python.
 from Tkinter import *
