@@ -1,0 +1,41 @@
+import Tkinter #importar modulo de interfaz grafica Tkinter Python.
+from Tkinter import *
+from tkMessageBox import * #Importar modulo MessageBox para la visualizacion de mensajes
+import RPi.GPIO as GPIO
+import time
+
+
+GPIO.setmode(GPIO.BCM) #GPIO configurado en modo Broadcom
+GPIO.setup(17,GPIO.OUT) #Pin GPIO 17 en modo salida
+
+topb=Tk() #Generar objeto de interfaz Tkinter
+topb.title("Aplicacion") #Titulo de la aplicacion
+frame= Frame(topb, width=130) #incluir objeto tkinter en frame con size 130 pixeles.
+frame.pack() #Crear frame
+
+def blinkA():#Secuencia de led numero 1
+	showinfo('Advertencia','Secuencia 1 iniciada') #Mostrar alerta(Mensaje) de secuencia
+	for i in range (0,5): #bucle de 6 repeticiones
+		GPIO.output(17,True) #Colocar pin 17 en 1
+		time.sleep(1) #delay de 1 segundo
+		GPIO.output(17, False) #Colocar piun GPIO 17 en 0
+		time.sleep(1)
+
+
+def blinkB():#Secuencia de led numero 2
+	showinfo('Advertencia','Secuencia 1 iniciada') #Mostrar alerta(Mensaje) de secuencia
+	for i in range (0,5): #bucle de 6 repeticiones
+		GPIO.output(17,True) #Colocar pin 17 en 1
+		time.sleep(0.2) #delay de 0.2 segundo
+		GPIO.output(17, False) #Colocar piun GPIO 17 en 0
+		time.sleep(0.2)
+
+
+
+B1=Button(topb, text="Secuencia 1", command=blinkA)
+B1.pack(side=LEFT)
+
+B2=Button(topb, text="Secuencia 2", command=blinkB)
+B2.pack(side=RIGHT)
+
+topb.mainloop()
