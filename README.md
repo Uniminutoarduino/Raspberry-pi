@@ -10,4 +10,4 @@ Los codigos y el tutorial es desarrollado por el departamento de Tecnologia en e
 
 # Notas
 
-Para el codigo de GPIOTkinter, ejecuta el codigo a través del comando gksudo (graphic sudo) no a través de sudo debido a un error que produce la ejecución del codigo en la autenticación del protocolo X11
+Para el codigo de GPIOTkinter, ejecuta el codigo a través del comando gksudo (graphic sudo) no a través de sudo debido a un error que produce la ejecución del codigo en la autenticación del protocolo X11.
