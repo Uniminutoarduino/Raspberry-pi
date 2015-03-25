@@ -1,0 +1,11 @@
+import serial #modulo de manejo de puerto serial mediante Python
+import time #modulo de manejo de tiempo "delay"
+
+
+
+port= serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=10) #conexion de puerto serial
+#la direccion del puerto es /dev/ttyAMA0, baurate=115200 baudios.
+
+while True: #Bucle infinito
+	port.write("\r\n Hola mundo Uniminuto!")
+	time.sleep(1) #delay de 1 segundo
